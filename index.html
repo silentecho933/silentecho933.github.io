@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Echo</title>
+</head>
+<body>
+    <style>
+
+    @font-face {
+        font-family: 'lansui';
+        src: url(./Iansui-Regular.ttf)format("truetype");
+}   
+@font-face {
+        font-family: 'Montserrat';
+        src: url(./Montserrat-Italic.ttf)format("truetype");
+}   
+@font-face {
+        font-family: 'love';
+        src: url(./MeaCulpa-Regular.ttf)format("truetype");
+}   
+    body {
+        font-family: "Montserrat";
+        background-image: url(./vecteezy_abstract-gradient-pastel-blue-and-purple-background-neon_8617161-1.jpg);
+    }
+   
+        
+    .header-text{
+        text-align: center;
+        margin: 0 auto;
+        width: 300px;
+    }
+
+    .header {
+        background-color: rgb(35, 95, 95);
+        width: 350px;
+        height: 480px;
+        border: 10px solid rgb(214, 90, 90);
+        margin: 5px auto;
+        padding: 10px;
+        line-height: 2em;
+        overflow: hidden;
+        color: white;
+        position: relative;
+    }
+    .header::after {
+        content: '💜🩷🧡💛💚💙🩵🤍❤️💜🩷🧡💛';
+        width: 5px;
+        position: absolute;
+        line-height: 35px;
+        font-size: 22px;
+        top: 30px;
+        left: 4px;
+    }
+    .header::before {
+        content: '💜🩷🧡💛💚💙🩵🤍❤️💜🩷🧡💛';
+        width: 5px;
+        position: absolute;
+        line-height: 35px;
+        font-size: 22px;
+        top: 33px;
+        right: 30px;
+    }
+    h2 {
+        margin-top: 40px;
+    }
+    .moon {
+        /* margin: 20px 0 ;
+        width: 400px; */
+    }
+    .moon img {
+        width: 24%;
+    }
+    #moon-btn {
+        width: 25%;
+        height: 40px;
+        padding: 6px;
+        background-color: aquamarine;
+        border: 1px solid rgb(35, 95, 95);
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    .divbtn {
+        margin:  -100px auto;
+        text-align: center;
+    }
+    @keyframes btn {
+        from {opacity: 1;}
+        to {opacity: 0}
+    }
+    .btn-anim {
+        animation-name: btn;
+        animation-duration: 3s;
+        animation-iteration-count: 1;  
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+    }
+    @keyframes mana-images {
+        from {opacity: 0;}
+        to {opacity: 1}
+    }
+    .btn-mana {
+        animation-name: mana-images;
+        animation-duration: 3s;
+        animation-iteration-count: 1;  
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        animation-delay: 1.8s;
+    }
+    #image1,#image2 {
+        opacity: 0;
+    }
+    .moon-images {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .img-come {
+        opacity: 1;
+    }
+    .galery {
+        margin-top: 120px;
+    }
+    .galery-text {
+        font-family: 'lansui';
+        text-align: center;
+        width: 600px;
+        margin: auto;
+        color: #f8f5f5;
+        line-height: 2rem;
+        text-shadow: 3px 5px 6px #dd37b0;
+        background-color: rgb(46, 46, 54);
+        padding: 16px;
+        border-radius: 2px 63px 2px 36px;
+    }
+    .galery-text h2{
+        margin: 0;
+    }
+    .galery-images {
+        display: flex;
+        justify-content: center;
+        gap: 75px;
+        margin-top: 3.5rem;
+    }
+    .right , .left {
+        width: 34%;
+        background-color: #c3a98b;
+        height: 516px;
+        border: 3px solid rgb(62, 54, 54);
+        box-shadow: 1px 1px 11px 5px #7575d3;
+    }
+    .right-images,.left-images {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .right-images img {
+        width: 34%;
+        height: 200px;
+        margin-top: -4px;
+    }
+    .left-images img {
+        width: 34%;
+        height: 200px;
+    }
+    .footer {
+        width: 44%;
+        margin: 7rem auto;
+        background-color: #14149e;
+        color: white;
+        padding: 20px;
+        border: 1px solid white;
+        box-shadow: 1px 0px 8px 4px white;
+        border-radius: 10px;
+    }
+    .song {
+        margin: 10px auto;
+        width: 45%;
+        text-align: center;
+        color: #E53888;
+    }
+    </style>
+    <div class="header">
+        <div class="header-text">
+            <!-- <h1>Do you remember our best moments?
+                I do!💜</h1> -->
+            <h2 style="margin-top: 24px;">Sometimes, words aren't enough. So i made this.</h2>
+            <h2>I don't know if this will mean anything to you. But i hope it does.</h2>
+            <h2 style="color: rgb(69, 225, 249);">No expectations. No pressure. Just a space to remind you... 
+            <br>you matter.</h2>
+        </div>
+    </div>
+    <div class="moon">
+        <div class="moon-images">
+        <img id="image1" src="./mana1.jpg" alt="">
+        <img id="moon-img" src="./realmoon.png" alt="">
+        <img id="image2" src="./mana2.jpg" alt="">
+        <!-- <img src="./gift-images/pic1.jpg" alt="">
+        </div> -->
+    </div>
+    <div class="divbtn">
+        <button id="moon-btn">click me please</button>
+    </div>
+    <br><br><br><br>
+    <div class="galery">
+        <div class="galery-text">
+            <h2>Some moments are too beautiful to fade. they live on in every glance, every smile, and every heartbeat.</h2>
+        </div>
+        <div class="galery-images">
+            <div class="right">
+                <h1 style="color: white; font-family: 'love'; text-align: center;margin: 0;">10/13/2023 </h1>
+                <h2 style="color: white; text-align: center; margin-top: 0;font-family: 'lansui';">The beginning of my life🫀</h2>
+                <div class="right-images">
+                    <img src="./couple1.jpg" alt="">
+                    <img src="./heart.jpg" alt="">
+                    <img src="./couple5.jpg" alt="">
+                    <img src="./couple7.jpg" alt="">
+                </div>
+            </div>
+            <div class="left">
+                <h1 style="color: white; font-family: 'love'; text-align: center;margin: 0;">23:32</h1>
+                <h2 style="color: white; text-align: center; margin-top: 0;font-family: 'lansui';">your favorite time</h2>
+                <div class="left-images">
+                    <img src="./couple2.jpg" alt="">
+                    <img src="./couple4.jpg" alt="">
+                    <img src="./couple3.jpg" alt="">
+                    <img src="./new.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h1>Thank you for taking the time to be here, for looking at this with your beautiful eyes, and for being part of my world even if just for a moment. it means more than words can say.❤️‍🩹🌻</h1>
+    </div>
+    <div class="song">
+        <h1>This song is for you.
+        i'd be happy if you listen to it.</h1>
+        <audio controls>
+            <source src="./justin_bieber_sorry.mp3" type="audio/mpeg">
+          </audio>
+    </div>
+<script>
+    let button = document.getElementById('moon-btn')
+    let img1 = document.getElementById('moon-img')
+    let img2 = document.getElementById("image1")
+    let img3 = document.getElementById("image2")
+
+    let moondiv = document.getElementsByClassName('moon')
+    button.addEventListener('click' , buttonclick)
+    button.addEventListener('click' , buttonclick2)
+    function buttonclick() {
+        button.innerHTML = 'Now I will show you the real moon...'
+        img1.classList.add('btn-anim')
+        img2.classList.add('btn-mana')
+        img3.classList.add('btn-mana')
+    }
+    function buttonclick2() {
+        
+    setTimeout (function buttonclick2() {
+        // img1.style.opacity = '1'
+        img1.setAttribute('src', './mana3.jpg')
+        img1.classList.remove('btn-anim')
+    }, 3500)}
+    
+</script>
+</body>
+</html>
